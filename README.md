@@ -23,6 +23,7 @@ FROM dim_customer
 WHERE customer = 'Atliq Exclusive' 
 AND region = 'APAC';
 
+
 ### 2. **Unique Product Increase in 2021 vs. 2020**
 **Request:** Calculate the percentage increase in unique products between 2021 and 2020.
 
@@ -44,3 +45,8 @@ cte2 AS (
 SELECT *, ROUND(chg/product_count_2020*100, 2) AS chg_pct 
 FROM cte2;
 
+### Query 1: List of Markets for "Atliq Exclusive" in APAC Region
+```sql
+SELECT DISTINCT market 
+FROM dim_customer
+WHERE customer = 'Atliq Exclusive' AND region = 'APAC';
