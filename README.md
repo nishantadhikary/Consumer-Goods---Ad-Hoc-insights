@@ -23,9 +23,3 @@ FROM dim_customer
 WHERE customer = 'Atliq Exclusive' 
 AND region = 'APAC';
 
-### Query 1: List of Markets for "Atliq Exclusive" in APAC Region
-```sql
-SELECT DISTINCT market 
-FROM dim_customer
-WHERE customer = 'Atliq Exclusive' AND region = 'APAC';
-
